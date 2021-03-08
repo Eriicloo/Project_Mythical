@@ -15,12 +15,7 @@ public class player_controller : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            jump = true;
-        }
+        anim = GetComponent<Animator>();  
     }
 
     // Update is called once per frame
@@ -28,6 +23,11 @@ public class player_controller : MonoBehaviour
     {
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Grounded", grounded);
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            jump = true;
+        }
     }
 
     void FixedUpdate()

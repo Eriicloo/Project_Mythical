@@ -490,7 +490,7 @@ MonoBehaviour:
   maxSpeed: 3
   speed: 50
   grounded: 0
-  jumpPower: 10
+  jumpPower: 5
 --- !u!4 &647614382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 315808299179111274, guid: e68fa17a6df0bb649ad15b6b625e5fa6,
