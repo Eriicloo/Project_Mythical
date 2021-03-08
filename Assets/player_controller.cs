@@ -24,7 +24,7 @@ public class player_controller : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Grounded", grounded);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             jump = true;
         }
@@ -32,6 +32,14 @@ public class player_controller : MonoBehaviour
 
     void FixedUpdate()
     {
+        Vector3 fixedVelocity = rb2d.velocity;
+        fixedVelocity.x *= 0.75f;
+
+        if (grounded)
+        {
+            rb2d.velocity = fixedVelocity;
+        }
+
         float h = Input.GetAxis("Horizontal");
 
         rb2d.AddForce(Vector2.right * speed * h);
@@ -51,9 +59,14 @@ public class player_controller : MonoBehaviour
 
         if (jump)
         {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
         }
-        
+    }
+
+    void OnBecameInvisible()
+    {
+        transform.position = new Vector3(-3, 0, 0);
     }
 }
