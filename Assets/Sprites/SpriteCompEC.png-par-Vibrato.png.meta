@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 4607ace86bda56048a22fc9cbac866a6
+guid: 38766b29b35fd64448df6e58ab1498b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4578838078175089954
-    second: SNES - King of Dragons - Wyvern_0
+      213: -7395476001681371907
+    second: SpriteCompEC.png-par-Vibrato_0
   - first:
-      213: -3550034901954029058
-    second: SNES - King of Dragons - Wyvern_1
+      213: 1304356907318622587
+    second: SpriteCompEC.png-par-Vibrato_1
   - first:
-      213: -7602980985483653912
-    second: SNES - King of Dragons - Wyvern_2
+      213: 4343273944709420430
+    second: SpriteCompEC.png-par-Vibrato_2
   - first:
-      213: -2295193003060179136
-    second: SNES - King of Dragons - Wyvern_3
+      213: -2687501523144260834
+    second: SpriteCompEC.png-par-Vibrato_3
   - first:
-      213: -7678150052731883283
-    second: SNES - King of Dragons - Wyvern_4
+      213: 6791596129408047288
+    second: SpriteCompEC.png-par-Vibrato_4
   - first:
-      213: 7911401574783516316
-    second: SNES - King of Dragons - Wyvern_5
+      213: 6261186931277416093
+    second: SpriteCompEC.png-par-Vibrato_5
   - first:
-      213: 2664968004333899265
-    second: SNES - King of Dragons - Wyvern_6
+      213: 5223817597873311536
+    second: SpriteCompEC.png-par-Vibrato_6
   - first:
-      213: 6930965887154422441
-    second: SNES - King of Dragons - Wyvern_7
+      213: -2711424432580984117
+    second: SpriteCompEC.png-par-Vibrato_7
+  - first:
+      213: 2816748737802889099
+    second: SpriteCompEC.png-par-Vibrato_8
+  - first:
+      213: 619509761573732702
+    second: SpriteCompEC.png-par-Vibrato_9
+  - first:
+      213: -3791182234139039355
+    second: SpriteCompEC.png-par-Vibrato_10
+  - first:
+      213: -132806005818654428
+    second: SpriteCompEC.png-par-Vibrato_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,169 +135,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_1
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 652
-        width: 21
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef99ac8c01ebbbec0800000000000000
-      internalID: -3550034901954029058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_0
+      name: SpriteCompEC.png-par-Vibrato_0
       rect:
         serializedVersion: 2
         x: 3
-        y: 385
-        width: 143
-        height: 110
+        y: 144
+        width: 90
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22598ade8fc4b8f30800000000000000
-      internalID: 4578838078175089954
+      spriteID: dfc0bd662cdfd5990800000000000000
+      internalID: -7395476001681371907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_2
+      name: SpriteCompEC.png-par-Vibrato_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 616
-        width: 23
-        height: 16
+        x: 100
+        y: 144
+        width: 88
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ec82367319cc7690800000000000000
-      internalID: -7602980985483653912
+      spriteID: b79bd0942b10a1210800000000000000
+      internalID: 1304356907318622587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_3
+      name: SpriteCompEC.png-par-Vibrato_2
       rect:
         serializedVersion: 2
-        x: 164
-        y: 385
-        width: 147
-        height: 110
+        x: 195
+        y: 144
+        width: 91
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04fc2a9cf16d520e0800000000000000
-      internalID: -2295193003060179136
+      spriteID: e855d9c14a8664c30800000000000000
+      internalID: 4343273944709420430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_4
+      name: SpriteCompEC.png-par-Vibrato_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 383
-        width: 143
-        height: 110
+        x: 6
+        y: 48
+        width: 60
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de0f4c6253bb17590800000000000000
-      internalID: -7678150052731883283
+      spriteID: e134aab8a9314bad0800000000000000
+      internalID: -2687501523144260834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_5
+      name: SpriteCompEC.png-par-Vibrato_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 258
-        width: 143
-        height: 109
+        x: 103
+        y: 48
+        width: 60
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9eff6cd0d1facd60800000000000000
-      internalID: 7911401574783516316
+      spriteID: 8b8d84f32b8904e50800000000000000
+      internalID: 6791596129408047288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_6
+      name: SpriteCompEC.png-par-Vibrato_5
       rect:
         serializedVersion: 2
-        x: 153
-        y: 262
-        width: 143
-        height: 108
+        x: 127
+        y: 96
+        width: 60
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e8a14c74edbf420800000000000000
-      internalID: 2664968004333899265
+      spriteID: d96cb1f375434e650800000000000000
+      internalID: 6261186931277416093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - King of Dragons - Wyvern_7
+      name: SpriteCompEC.png-par-Vibrato_6
       rect:
         serializedVersion: 2
-        x: 305
-        y: 257
-        width: 143
-        height: 114
+        x: 224
+        y: 96
+        width: 60
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a28036a0ccbf2060800000000000000
-      internalID: 6930965887154422441
+      spriteID: 03f4ca4ad6abe7840800000000000000
+      internalID: 5223817597873311536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteCompEC.png-par-Vibrato_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 87
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc202b428d51f5ad0800000000000000
+      internalID: -2711424432580984117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteCompEC.png-par-Vibrato_8
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 88
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b876542ad0a171720800000000000000
+      internalID: 2816748737802889099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteCompEC.png-par-Vibrato_9
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 89
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e514d7988d0f89800800000000000000
+      internalID: 619509761573732702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteCompEC.png-par-Vibrato_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 96
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589ee5738d3036bc0800000000000000
+      internalID: -3791182234139039355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteCompEC.png-par-Vibrato_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 48
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421042f24ad282ef0800000000000000
+      internalID: -132806005818654428
       vertices: []
       indices: 
       edges: []
@@ -293,7 +389,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ebfa58f24fc260248a45f1b1c67f69c7
+    spriteID: fb597498b944cb54ebf04a7178314190
     internalID: 0
     vertices: []
     indices: 
