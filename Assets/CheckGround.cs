@@ -48,7 +48,7 @@ public class CheckGround : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             player.transform.parent = null;
-            player.grounded = true;
+            player.grounded = false;
         }
     }
 }
