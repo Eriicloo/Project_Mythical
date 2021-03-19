@@ -7,11 +7,12 @@ public class player_controller : MonoBehaviour
     public float maxSpeed = 5f;
     public float speed = 2f;
     public bool grounded;
-    public float jumpPower = 6.5f;
+    public float jumpPower = 7f;
 
     private Rigidbody2D rb2d;
     private Animator anim;
     private bool jump;
+    private bool doubleJump;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -24,9 +25,23 @@ public class player_controller : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Grounded", grounded);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
+        if (grounded)
         {
-            jump = true;
+            doubleJump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (grounded)
+            {
+                jump = true;
+                doubleJump = true;
+            }
+            else if (doubleJump)
+            {
+                jump = true;
+                doubleJump = false;
+            }
         }
     }
 
@@ -67,6 +82,6 @@ public class player_controller : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        transform.position = new Vector3(-3, 0, 0);
+        transform.position = new Vector3(-4, -1, 0);
     }
 }
