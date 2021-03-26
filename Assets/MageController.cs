@@ -45,6 +45,9 @@ public class MageController : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            else {
+                col.SendMessage("EnemyKnockBack", transform.position.x);
+            }
         }
     }
 }
