@@ -6,21 +6,48 @@ public class Patrol : MonoBehaviour
 {
     public float speed;
     public float distance = 2f;
+    public float stopDistance;
+
+    private float timeShots;
+    public float startTimeShots;
 
     private bool rightMove = true;
 
     public Transform groundDetector;
 
+    private Transform player;
+    public GameObject shot;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        timeShots = startTimeShots;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Vector2.Distance(transform.position, player.position) > stopDistance) {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+        else if (Vector2.Distance(transform.position, player.position) < stopDistance && Vector2.Distance(transform.position, player.position) > stopDistance) {
+            transform.position = this.transform.position;
+        }
+        if (timeShots <= 0) {
+            Instantiate(shot, transform.position, Quaternion.identity);
+            timeShots = startTimeShots;
+        }
+        else {
+            timeShots -= Time.deltaTime;        
+        }
+
+
+
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, distance);
