@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Mage_Attack : MonoBehaviour
 {
     public float speed;
 
     private Transform player;
 
     private Vector2 target;
+    
     
     // Start is called before the first frame update
 
@@ -27,12 +28,14 @@ public class NewBehaviourScript : MonoBehaviour
         if (transform.position.x == target.x && transform.position.y == target.y) {
             DestroyProjectile();
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player") || other.CompareTag("Ground") || other.CompareTag("Platform")) {
             DestroyProjectile();
         }
+        
     }
     void DestroyProjectile() {
         Destroy(gameObject);

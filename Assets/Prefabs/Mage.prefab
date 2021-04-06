@@ -213,7 +213,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   distance: 1
+  stopDistance: 10
+  retreatDistance: 1.5
+  startTimeShots: 2
   groundDetector: {fileID: 1668159429}
+  shot: {fileID: 1597549779950568549, guid: 70f57823edb20da498331b5ba740d8e3, type: 3}
 --- !u!1 &7736790727254200277
 GameObject:
   m_ObjectHideFlags: 0
