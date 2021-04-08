@@ -6,6 +6,7 @@ public class Mage_Attack : MonoBehaviour
 {
     public float speedX = 5f;
     float speedY = 0f;
+    public float amount = 10.0f;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class Mage_Attack : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
@@ -37,4 +38,11 @@ public class Mage_Attack : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
+        }
+    }
 }

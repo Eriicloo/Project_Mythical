@@ -106,7 +106,9 @@ public class player_controller : MonoBehaviour
         transform.position = new Vector3(-4, -1, 0);
     }
 
-    public void EnemyKnockBack(float enemyPosX) {
+
+    void EnemyKnockBack(float enemyPosX)
+    {
         jump = true;
 
         float side = Mathf.Sign(enemyPosX - transform.position.x);
@@ -117,6 +119,7 @@ public class player_controller : MonoBehaviour
 
         spr.color = Color.red;
     }
+
 
     void EnableMovement() {
         movement = true;
@@ -135,4 +138,5 @@ public class player_controller : MonoBehaviour
             Instantiate(AttackLeft, AttackPos, Quaternion.identity);
         }
     }
+
 }
