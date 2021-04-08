@@ -8,6 +8,12 @@ public class player_controller : MonoBehaviour
     public float speed = 2f;
     public bool grounded;
     public float jumpPower = 7f;
+    bool facingRight = true;
+
+    public GameObject AttackLeft, AttackRight;
+    Vector2 AttackPos;
+    public float fireRate = 1f;
+    float nextAttack = 0.0f;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -33,7 +39,7 @@ public class player_controller : MonoBehaviour
             doubleJump = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
             if (grounded)
             {
@@ -46,6 +52,13 @@ public class player_controller : MonoBehaviour
                 doubleJump = false;
             }
         }
+
+        if(Input.GetButtonDown ("Fire1") && Time.time > nextAttack)
+        {
+            nextAttack = Time.time + fireRate;
+            Attack();
+        }
+
     }
 
     void FixedUpdate()
@@ -71,11 +84,13 @@ public class player_controller : MonoBehaviour
         if (h > 0.1f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
+            facingRight = true;
         }
 
         if (h < -0.1f)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
+            facingRight = false;
         }
 
         if (jump)
@@ -106,5 +121,18 @@ public class player_controller : MonoBehaviour
     void EnableMovement() {
         movement = true;
         spr.color = Color.white;
+    }
+
+    void Attack() {
+        AttackPos = transform.position;
+        if (facingRight)
+        {
+            AttackPos += new Vector2(0.5f, 0f);
+            Instantiate(AttackRight, AttackPos, Quaternion.identity);
+        }
+        else {
+            AttackPos += new Vector2(-0.5f, 0f);
+            Instantiate(AttackLeft, AttackPos, Quaternion.identity);
+        }
     }
 }

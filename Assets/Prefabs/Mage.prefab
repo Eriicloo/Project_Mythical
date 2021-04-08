@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1490400735}
   m_Layer: 9
   m_Name: Mage
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,13 @@ MonoBehaviour:
   distance: 1
   stopDistance: 10
   retreatDistance: 1.5
-  startTimeShots: 2
+  AttackLeft: {fileID: 7387316615746645781, guid: 3fcd89b9ff12dea4eaed425509c93473,
+    type: 3}
+  AttackRight: {fileID: 1597549779950568549, guid: 70f57823edb20da498331b5ba740d8e3,
+    type: 3}
+  fireRate: 2
+  startTimeShots: 1
+  agroDistance: 2
   groundDetector: {fileID: 1668159429}
   shot: {fileID: 1597549779950568549, guid: 70f57823edb20da498331b5ba740d8e3, type: 3}
 --- !u!1 &7736790727254200277

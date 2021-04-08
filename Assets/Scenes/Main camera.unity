@@ -1521,26 +1521,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1596864714215661607, guid: 549cf2bcd71657c4e9e084866839f091,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 4.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406993795898316394, guid: 549cf2bcd71657c4e9e084866839f091,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 4.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406993795898316394, guid: 549cf2bcd71657c4e9e084866839f091,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 4.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406993795898316394, guid: 549cf2bcd71657c4e9e084866839f091,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 285a29c8afd8c4341946202df1ecefa2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549cf2bcd71657c4e9e084866839f091, type: 3}
 --- !u!1 &919662819
@@ -2402,12 +2382,12 @@ PrefabInstance:
     - target: {fileID: 2189679067034781650, guid: 35c045bad221b0941b0dac6054d2107c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.943149
+      value: -5.501
       objectReference: {fileID: 0}
     - target: {fileID: 2189679067034781650, guid: 35c045bad221b0941b0dac6054d2107c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1542442
+      value: -2.154
       objectReference: {fileID: 0}
     - target: {fileID: 2189679067034781650, guid: 35c045bad221b0941b0dac6054d2107c,
         type: 3}
@@ -2452,11 +2432,6 @@ PrefabInstance:
     - target: {fileID: 2189679067034781650, guid: 35c045bad221b0941b0dac6054d2107c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189679067034781651, guid: 35c045bad221b0941b0dac6054d2107c,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2583,6 +2558,18 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2510091668209069411, guid: e23527f1807e4234eabac5f7f5d516f1,
+        type: 3}
+      propertyPath: AttackRight
+      value: 
+      objectReference: {fileID: 8672582539685159675, guid: 67c696464e34b90418f69676af1f3a52,
+        type: 3}
+    - target: {fileID: 2510091668209069411, guid: e23527f1807e4234eabac5f7f5d516f1,
+        type: 3}
+      propertyPath: AttackLeft
+      value: 
+      objectReference: {fileID: 6578042576924922338, guid: f7a165c239610aa499eb3f426f650317,
+        type: 3}
     - target: {fileID: 2510091668209069417, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_Mass

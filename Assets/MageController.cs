@@ -6,6 +6,9 @@ public class MageController : MonoBehaviour
 {
     public float maxSpeed = 1f;
     public float speed = 1f;
+    bool facingRight = true;
+    
+
 
     private Rigidbody2D rb2d;
     // Start is called before the first frame update
@@ -29,25 +32,14 @@ public class MageController : MonoBehaviour
         if (speed > 0)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
+            facingRight = true;
         }
 
         else if (speed < 0)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
+            facingRight = false;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Player") {
-
-            float yOffset = 0.08f;
-            if (transform.position.y + yOffset < col.transform.position.y)
-            {
-                Destroy(gameObject);
-            }
-            else {
-                col.SendMessage("EnemyKnockBack", transform.position.x);
-            }
-        }
-    }
 }
