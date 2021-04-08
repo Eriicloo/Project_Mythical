@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Aquest script tant sols fa que es dibuixe una linea que anira desde la plataforma movil fins el seu objectiu.
+//Es un script que serveix per fer debugg, res mes
 public class DrawSceneLine : MonoBehaviour
 {
 

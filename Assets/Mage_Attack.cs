@@ -7,7 +7,6 @@ public class Mage_Attack : MonoBehaviour
     public float speed;
 
     private Transform player;
-
     private Vector2 target;
     
     

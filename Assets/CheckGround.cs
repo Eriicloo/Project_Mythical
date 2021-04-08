@@ -7,7 +7,6 @@ public class CheckGround : MonoBehaviour
     private player_controller player;
     private Rigidbody2D rb2d;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GetComponentInParent<player_controller>();
