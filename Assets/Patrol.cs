@@ -60,7 +60,7 @@ public class Patrol : MonoBehaviour
 
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(transform.position, Vector2.down, distance);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, distance);
 
         if (groundInfo.collider == false) {
             if (rightMove == true) {
@@ -75,6 +75,8 @@ public class Patrol : MonoBehaviour
                 facingRight = true;
             }
         }
+
+        
     }
 
 

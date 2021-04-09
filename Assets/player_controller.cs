@@ -9,6 +9,11 @@ public class player_controller : MonoBehaviour
     public bool grounded;
     public float jumpPower = 7f;
     bool facingRight = true;
+    
+    bool isTouchingFront;
+    public Transform frontCheck;
+    bool wallSliding;
+    public float wallSlidingSpeed;
 
     public GameObject AttackLeft, AttackRight;
     Vector2 AttackPos;

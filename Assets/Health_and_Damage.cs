@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Health_and_Damage : MonoBehaviour
 {
-    public float life = 50.0f;
+    public float life = 100.0f;
+    public float maxLife = 100.0f;
     public bool invencible = false;
     public float invencible_time = 0.5f;
     public float braking_time = 0.1f;
@@ -15,6 +16,10 @@ public class Health_and_Damage : MonoBehaviour
         {
             life -= amount;
             StartCoroutine(invulnerability());
+        }
+        if (life <= 1)
+        {
+            Destroy(gameObject);
         }
     }
 
