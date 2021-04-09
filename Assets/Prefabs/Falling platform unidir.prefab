@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a1d62315a8121438eec0a24747bae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallDelay: 1
+  fallDelay: 2
   respawnDelay: 3
 --- !u!61 &8648672459343715376
 BoxCollider2D:

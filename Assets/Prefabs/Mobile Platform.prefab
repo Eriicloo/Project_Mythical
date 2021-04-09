@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6392949011670784108}
   - component: {fileID: 6392949011670784107}
   m_Layer: 0
-  m_Name: Plataforma Movil
+  m_Name: Mobile Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6392949011828744858}
-  speed: 0.5
+  speed: 2
 --- !u!1 &6392949011828744861
 GameObject:
   m_ObjectHideFlags: 0

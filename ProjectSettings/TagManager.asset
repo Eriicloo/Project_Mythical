@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Wall
   - Enemy
+  - Wall_Jumping
   layers:
   - Default
   - TransparentFX

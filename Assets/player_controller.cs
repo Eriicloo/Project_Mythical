@@ -7,13 +7,9 @@ public class player_controller : MonoBehaviour
     public float maxSpeed = 5f;
     public float speed = 2f;
     public bool grounded;
+    public bool wall_jump;
     public float jumpPower = 7f;
     bool facingRight = true;
-    
-    bool isTouchingFront;
-    public Transform frontCheck;
-    bool wallSliding;
-    public float wallSlidingSpeed;
 
     public GameObject AttackLeft, AttackRight;
     Vector2 AttackPos;
@@ -46,6 +42,11 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
+            if (wall_jump)
+            {
+                jump = true;               
+            }
+
             if (grounded)
             {
                 jump = true;
@@ -57,6 +58,7 @@ public class player_controller : MonoBehaviour
                 doubleJump = false;
             }
         }
+
 
         if(Input.GetButtonDown ("Fire1") && Time.time > nextAttack)
         {
@@ -75,6 +77,8 @@ public class player_controller : MonoBehaviour
         {
             rb2d.velocity = fixedVelocity;
         }
+
+
 
         float h = Input.GetAxis("Horizontal");
 
@@ -144,4 +148,19 @@ public class player_controller : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall_Jumping")
+        {
+            wall_jump = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall_Jumping")
+        {
+            wall_jump = false;
+        }
+    }
 }

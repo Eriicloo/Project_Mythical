@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
 {
-    public float speedX = 5f;
+    public float speedX = 10f;
     float speedY = 0f;
     Rigidbody2D rb;
 
@@ -18,7 +18,7 @@ public class Player_Attack : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(speedX, speedY);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.5f);
         
     }
 
