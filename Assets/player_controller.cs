@@ -66,6 +66,11 @@ public class player_controller : MonoBehaviour
             Attack();
         }
 
+        if (Input.GetKey(KeyCode.LeftAlt) || Input.GetButton("Glide"))
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, -1f);
+        }
+
     }
 
     void FixedUpdate()
