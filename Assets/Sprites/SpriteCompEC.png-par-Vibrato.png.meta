@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: -132806005818654428
     second: SpriteCompEC.png-par-Vibrato_11
+  - first:
+      213: 3827089077408526338
+    second: SpriteCompEC.png-par-Vibrato_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,9 +142,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 144
+        y: 150
         width: 90
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,9 +163,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 144
+        y: 148
         width: 88
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,9 +184,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 195
-        y: 144
+        y: 148
         width: 91
-        height: 48
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 48
+        y: 51
         width: 60
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,9 +226,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 103
-        y: 48
+        y: 53
         width: 60
-        height: 48
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,9 +247,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 96
+        y: 101
         width: 60
-        height: 48
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,9 +268,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 96
+        y: 99
         width: 60
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,9 +352,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 96
+        y: 102
         width: 61
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,9 +373,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 198
-        y: 48
+        y: 54
         width: 61
-        height: 48
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

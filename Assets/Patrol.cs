@@ -9,7 +9,6 @@ public class Patrol : MonoBehaviour
     public float stopDistance;
     public float retreatDistance;
     bool facingRight = true;
-    int facingMultiplier = 1;
 
     public GameObject AttackLeft, AttackRight;
     Vector2 AttackPos;
