@@ -3023,6 +3023,11 @@ PrefabInstance:
       propertyPath: not_wall_jump_time
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2510091668209069411, guid: e23527f1807e4234eabac5f7f5d516f1,
+        type: 3}
+      propertyPath: Glide
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069416, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_Offset.x
