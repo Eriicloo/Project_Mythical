@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 2510091668209069420}
   - component: {fileID: 2510091668209069411}
   - component: {fileID: 2510091668209069416}
+  - component: {fileID: 709616948}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -202,7 +203,13 @@ MonoBehaviour:
   maxSpeed: 2.5
   speed: 75
   grounded: 0
+  wall_jump: 0
   jumpPower: 7
+  AttackLeft: {fileID: 6578042576924922338, guid: f7a165c239610aa499eb3f426f650317,
+    type: 3}
+  AttackRight: {fileID: 8672582539685159675, guid: 67c696464e34b90418f69676af1f3a52,
+    type: 3}
+  fireRate: 0.7
 --- !u!70 &2510091668209069416
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -219,3 +226,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.019421145}
   m_Size: {x: 0.27002907, y: 0.37214133}
   m_Direction: 0
+--- !u!114 &709616948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510091668209069418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796408fd02573aa40b597dbb0e9768b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 100
+  maxLife: 100
+  invencible: 0
+  invencible_time: 0.5
+  braking_time: 0.1
