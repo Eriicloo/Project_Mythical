@@ -78,8 +78,6 @@ public class Patrol : MonoBehaviour
         
     }
 
-
-
     void Attack()
     {
         AttackPos = transform.position;
