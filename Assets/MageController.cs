@@ -8,8 +8,6 @@ public class MageController : MonoBehaviour
     public float speed = 1f;
     bool facingRight = true;
     
-
-
     private Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
