@@ -6,7 +6,7 @@ public class Mage_Attack : MonoBehaviour
 {
     public float speedX = 5f;
     float speedY = 0f;
-    public float amount = 30.0f;
+    public float amount = 20.0f;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
