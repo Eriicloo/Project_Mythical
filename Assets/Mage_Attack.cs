@@ -23,26 +23,19 @@ public class Mage_Attack : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Wall"))
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
+            Destroy(gameObject);
+
         }
+
+        if ( collision.tag == "Wall")
+            Destroy(gameObject);
+
+
     }
 }

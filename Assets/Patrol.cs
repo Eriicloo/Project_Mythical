@@ -35,34 +35,14 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Vector2.Distance(transform.position, player.position) > stopDistance) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            
-        }
-        else if (Vector2.Distance(transform.position, player.position) < stopDistance && Vector2.Distance(transform.position, player.position) > retreatDistance) {
-            transform.position = this.transform.position;
-            
-        }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-
-            if(Time.time > nextAttack)
-            {
-                nextAttack = Time.time + fireRate;
-                Attack();
-            }
-        }
-
-
-
-
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, distance);
 
-        if (groundInfo.collider == false) {
-            if (rightMove == true) {
+        if (groundInfo.collider == false)
+        {
+            if (rightMove == true)
+            {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 rightMove = false;
                 facingRight = false;
@@ -75,7 +55,24 @@ public class Patrol : MonoBehaviour
             }
         }
 
-        
+
+        if (Vector2.Distance(transform.position, player.position) > stopDistance) {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            
+        }
+        if (Vector2.Distance(transform.position, player.position) < stopDistance && Vector2.Distance(transform.position, player.position) > retreatDistance) {
+            transform.position = this.transform.position;
+            
+        }
+        if (Vector2.Distance(transform.position, player.position) < retreatDistance) {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+
+            if(Time.time > nextAttack)
+            {
+                nextAttack = Time.time + fireRate;
+                Attack();
+            }
+        }   
     }
 
     void Attack()
