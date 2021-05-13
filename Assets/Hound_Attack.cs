@@ -20,12 +20,12 @@ public class Hound_Attack : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-
+            Destroy(collision.gameObject);
         }
     }
 }
