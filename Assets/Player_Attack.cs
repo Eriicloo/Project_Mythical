@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     public float speedX = 10f;
+    public float damage = 5f;
     float speedY = 0f;
     Rigidbody2D rb;
 
@@ -24,7 +25,8 @@ public class Player_Attack : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Wall_Jumping"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") 
+            || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Wall_Jumping") || collision.gameObject.CompareTag("Boss"))
         {
             Destroy(gameObject);
         }
@@ -33,8 +35,20 @@ public class Player_Attack : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
+            Destroy(gameObject);
+
+        }
+
+        if (collision.tag == "Wall")
+            Destroy(gameObject);
     }
 }

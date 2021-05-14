@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Enemy
   - Wall_Jumping
+  - Boss
   layers:
   - Default
   - TransparentFX
