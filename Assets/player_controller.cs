@@ -9,6 +9,7 @@ public class player_controller : MonoBehaviour
     public bool grounded;
     public bool wall_jump;
     public float jumpPower = 7f;
+    public int counter = 0;
     bool facingRight = true;
 
     public GameObject AttackLeft, AttackRight;
@@ -42,15 +43,19 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
-            if (wall_jump)
+            if (wall_jump && counter < 3)
             {
-                jump = true;               
+                jump = true;
+
+                if(jump)
+                    counter++;
             }
 
             if (grounded)
             {
                 jump = true;
                 doubleJump = true;
+                counter = 0;
             }
             else if (doubleJump)
             {

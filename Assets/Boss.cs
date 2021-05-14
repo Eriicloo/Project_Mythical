@@ -20,12 +20,16 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 50 || stageTwo == false)
+        if (health <= 50 && stageTwo == false)
         {
             anim.SetTrigger("stageTwo");
             stageTwo = true;
         }
 
         healthBar.value = health;
+    }
+
+    public void Prova() { 
+    
     }
 }
