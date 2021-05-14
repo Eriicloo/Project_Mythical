@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8672582539685159678}
   - component: {fileID: 8672582539685159673}
   - component: {fileID: 8672582539685159672}
+  - component: {fileID: 6597721664022716485}
   m_Layer: 0
   m_Name: PlayerAttackRight
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7558673754538462546, guid: af5b31e6756acd34fa23403418896a7e,
+  m_Sprite: {fileID: 4695829774511013448, guid: af5b31e6756acd34fa23403418896a7e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -157,3 +158,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 6
   damage: 5
+--- !u!95 &6597721664022716485
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672582539685159675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eef37eeb452c2374991aef321cb7688f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

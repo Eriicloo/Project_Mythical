@@ -9,8 +9,6 @@ public class Boss : MonoBehaviour
     public int damage;
     public bool stageTwo = false;
 
-    public float amount = 20f;
-
     public Slider healthBar;
     private Animator anim;
     // Start is called before the first frame update
@@ -35,7 +33,7 @@ public class Boss : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
+            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
 
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }

@@ -36,7 +36,6 @@ public class Player_Attack : MonoBehaviour
         {
             Destroy(gameObject);
             collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
-
         }
     }
 }
