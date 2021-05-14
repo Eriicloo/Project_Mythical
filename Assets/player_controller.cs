@@ -131,7 +131,7 @@ public class player_controller : MonoBehaviour
         jump = true;
 
         float side = Mathf.Sign(enemyPosX - transform.position.x);
-        rb2d.AddForce(Vector2.left * side, ForceMode2D.Impulse);
+        rb2d.AddForce(Vector2.left * side * jumpPower, ForceMode2D.Impulse);
 
         movement = false;
         Invoke("EnableMovement", 0.7f);

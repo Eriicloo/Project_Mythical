@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Wall_Jumping
   - Boss
+  - Hounds
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - Player
   - Enemies
-  - 
+  - Hounds
   - 
   - 
   - 

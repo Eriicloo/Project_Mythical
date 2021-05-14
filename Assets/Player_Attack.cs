@@ -23,32 +23,20 @@ public class Player_Attack : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform") 
-            || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Wall_Jumping") || collision.gameObject.CompareTag("Boss"))
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-        }
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
-            Destroy(gameObject);
 
+        if (collision.tag=="Player" || collision.tag == "Ground" || collision.tag == "Platform" || collision.tag == "Wall" 
+            || collision.tag == "Wall_Jumping")
+        {
+            Destroy(gameObject);
         }
 
-        if (collision.tag == "Wall")
+        if (collision.tag == "Enemy" || collision.tag == "Boss")
+        {
             Destroy(gameObject);
+            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
+
+        }
     }
 }

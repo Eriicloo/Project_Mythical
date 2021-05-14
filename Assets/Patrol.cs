@@ -19,14 +19,14 @@ public class Patrol : MonoBehaviour
     public float agroDistance;
 
     public Transform groundDetector;
-
+    public Health_and_Damage had;
     private Transform player;
     public GameObject shot;
 
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Physics2D.queriesStartInColliders = false;
 

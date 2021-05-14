@@ -10,6 +10,8 @@ public class Health_and_Damage : MonoBehaviour
     public float invencible_time = 0.5f;
     public float braking_time = 0.1f;
 
+    Patrol patrol;
+
     public void Subtract_life(float amount)
     {
         if (!invencible && life > 0)
