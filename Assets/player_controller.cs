@@ -9,7 +9,9 @@ public class player_controller : MonoBehaviour
     public bool grounded;
     public bool wall_jump;
     public float jumpPower = 7f;
-    public int counter = 0;
+    public int counterWallJump = 0;
+    public float cd = 1f;
+    private float nextDashTime = 0f;
     bool facingRight = true;
 
 
@@ -59,19 +61,19 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
-            if (wall_jump && counter < 4)
+            if (wall_jump && counterWallJump < 4)
             {
                 jump = true;
 
                 if(jump)
-                    counter++;
+                    counterWallJump++;
             }
 
             if (grounded)
             {
                 jump = true;
                 doubleJump = true;
-                counter = 0;
+                counterWallJump = 0;
             }
             else if (doubleJump)
             {
@@ -96,17 +98,17 @@ public class player_controller : MonoBehaviour
             action = true;
         }
 
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && movX != 0) 
+        if (Time.time > nextDashTime)
         {
-            isDashing = true;
-            currentDashTime = startDashTime;
-            rb2d.velocity = Vector2.zero;
-            dashDirection = (int)movX;
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && movX != 0)
+            {
+                nextDashTime = Time.time + cd;
+                isDashing = true;
+                currentDashTime = startDashTime;
+                rb2d.velocity = Vector2.zero;
+                dashDirection = (int)movX;
+            }
         }
-
-        
-
 
     }
 

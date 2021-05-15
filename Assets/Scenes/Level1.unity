@@ -3277,6 +3277,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796408fd02573aa40b597dbb0e9768b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1632123461
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632123453}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003627658, y: 0.18755102}
+  serializedVersion: 2
+  m_Radius: 0.034271
 --- !u!1 &1649151993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,6 +3738,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2510091668047759077, guid: e23527f1807e4234eabac5f7f5d516f1,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.16613263
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510091668047759077, guid: e23527f1807e4234eabac5f7f5d516f1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.36869395
+      objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069418, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_Name

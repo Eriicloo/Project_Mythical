@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32987678, y: 0.19199508}
-  m_Size: {x: 0.25994945, y: 0.42041886}
+  m_Offset: {x: -0.32987678, y: 0.16340369}
+  m_Size: {x: 0.25994945, y: 0.36323607}
   m_Direction: 0
 --- !u!114 &2510091668047759076
 MonoBehaviour:
@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 2510091668209069411}
   - component: {fileID: 2510091668209069416}
   - component: {fileID: 1632123460}
+  - component: {fileID: 709616949}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -205,10 +206,11 @@ MonoBehaviour:
   grounded: 0
   wall_jump: 0
   jumpPower: 6
-  counter: 0
+  counterWallJump: 0
+  cd: 2
   action: 0
-  dashForce: 0
-  startDashTime: 0
+  dashForce: 500
+  startDashTime: 0.2
   AttackLeft: {fileID: 6578042576924922338, guid: f7a165c239610aa499eb3f426f650317,
     type: 3}
   AttackRight: {fileID: 8672582539685159675, guid: 67c696464e34b90418f69676af1f3a52,
@@ -247,3 +249,19 @@ MonoBehaviour:
   invencible: 0
   invencible_time: 0.5
   braking_time: 0.2
+--- !u!58 &709616949
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510091668209069418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.18359065}
+  serializedVersion: 2
+  m_Radius: 0.040354013
