@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   health: 100
   damage: 20
   stageTwo: 0
-  amount: 20
+  circle: {fileID: 6932120581427278988}
   healthBar: {fileID: 0}
 --- !u!70 &8872449292964841497
 CapsuleCollider2D:
@@ -204,6 +204,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0.08956051}
+  m_Offset: {x: 0.08731812, y: 0.08956051}
   serializedVersion: 2
-  m_Radius: 0.79793954
+  m_Radius: 0.78525764

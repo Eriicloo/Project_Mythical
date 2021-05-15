@@ -12,6 +12,19 @@ public class player_controller : MonoBehaviour
     public int counter = 0;
     bool facingRight = true;
 
+
+    public bool action;
+
+    float movX;
+
+    public float dashForce;
+    public float startDashTime;
+    float currentDashTime;
+    float dashDirection;
+    bool isDashing;
+
+
+
     public GameObject AttackLeft, AttackRight;
     Vector2 AttackPos;
     public float fireRate = 1f;
@@ -33,6 +46,9 @@ public class player_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        movX = Input.GetAxis("Horizontal");
+
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Grounded", grounded);
 
@@ -43,7 +59,7 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
-            if (wall_jump && counter < 3)
+            if (wall_jump && counter < 4)
             {
                 jump = true;
 
@@ -75,6 +91,22 @@ public class player_controller : MonoBehaviour
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, -1f);
         }
+        if (Input.GetKey(KeyCode.E) || Input.GetButton("Action")) 
+        {
+            action = true;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && movX != 0) 
+        {
+            isDashing = true;
+            currentDashTime = startDashTime;
+            rb2d.velocity = Vector2.zero;
+            dashDirection = (int)movX;
+        }
+
+        
+
 
     }
 
@@ -87,8 +119,6 @@ public class player_controller : MonoBehaviour
         {
             rb2d.velocity = fixedVelocity;
         }
-
-
 
         float h = Input.GetAxis("Horizontal");
 
@@ -118,6 +148,21 @@ public class player_controller : MonoBehaviour
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
         }
+
+        if (isDashing)
+        {
+            rb2d.AddForce(Vector2.right * dashForce * movX);
+
+            currentDashTime -= Time.deltaTime;
+
+
+            if (currentDashTime <= 0)
+            {
+                isDashing = false;
+            }
+        }
+
+
     }
 
     void OnBecameInvisible()
@@ -131,14 +176,13 @@ public class player_controller : MonoBehaviour
         jump = true;
 
         float side = Mathf.Sign(enemyPosX - transform.position.x);
-        rb2d.AddForce(Vector2.left * side * jumpPower, ForceMode2D.Impulse);
+        rb2d.AddForce(Vector2.right * side, ForceMode2D.Impulse);
 
         movement = false;
         Invoke("EnableMovement", 0.7f);
 
         spr.color = Color.red;
     }
-
 
     void EnableMovement() {
         movement = true;
@@ -173,4 +217,9 @@ public class player_controller : MonoBehaviour
             wall_jump = false;
         }
     }
+
+
+    
+
+    
 }

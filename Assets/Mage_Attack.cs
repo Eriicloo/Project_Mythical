@@ -30,7 +30,7 @@ public class Mage_Attack : MonoBehaviour
         {
             collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
             Destroy(gameObject);
-            //collision.SendMessage("EnemyKnockBack", transform.position.x);
+            collision.SendMessage("EnemyKnockBack", transform.position.x);
         }
 
         if (collision.tag == "Wall")

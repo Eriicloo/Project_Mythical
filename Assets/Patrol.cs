@@ -19,7 +19,6 @@ public class Patrol : MonoBehaviour
     public float agroDistance;
 
     public Transform groundDetector;
-    public Health_and_Damage had;
     private Transform player;
     public GameObject shot;
 
@@ -57,8 +56,10 @@ public class Patrol : MonoBehaviour
 
 
         if (Vector2.Distance(transform.position, player.position) > stopDistance) {
+        
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            
+
+
         }
         if (Vector2.Distance(transform.position, player.position) < stopDistance && Vector2.Distance(transform.position, player.position) > retreatDistance) {
             transform.position = this.transform.position;

@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public int health;
-    public int damage;
+    public float health = 100f;
+    public float damage = 20f;
     public bool stageTwo = false;
+
+
+    public Collider2D circle;
 
     public Slider healthBar;
     private Animator anim;
@@ -25,7 +28,6 @@ public class Boss : MonoBehaviour
             anim.SetTrigger("stageTwo");
             stageTwo = true;
         }
-
         healthBar.value = health;
     }
 
@@ -38,4 +40,16 @@ public class Boss : MonoBehaviour
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }
     }
+
+
+    public void ActivateCollider() 
+    {
+        circle.enabled = true;
+    }
+    public void DeactivateCollider()
+    {
+        circle.enabled = false;
+    }
+
+
 }
