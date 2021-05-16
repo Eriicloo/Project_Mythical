@@ -37,7 +37,7 @@ public class player_controller : MonoBehaviour
     private SpriteRenderer spr;
     private bool jump;
     private bool doubleJump;
-    private bool movement = true;
+    public bool movement = true;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -93,10 +93,6 @@ public class player_controller : MonoBehaviour
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, -1f);
         }
-        if (Input.GetKey(KeyCode.E) || Input.GetButton("Action")) 
-        {
-            action = true;
-        }
 
         if (Time.time > nextDashTime)
         {
@@ -122,23 +118,23 @@ public class player_controller : MonoBehaviour
             rb2d.velocity = fixedVelocity;
         }
 
-        float h = Input.GetAxis("Horizontal");
+ 
 
         if (!movement) 
-            h = 0;
+            movX = 0;
 
-        rb2d.AddForce(Vector2.right * speed * h);
+        rb2d.AddForce(Vector2.right * speed * movX);
 
         float limitedSpeed = Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed);
         rb2d.velocity = new Vector2(limitedSpeed, rb2d.velocity.y);
 
-        if (h > 0.1f)
+        if (movX > 0.1f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
             facingRight = true;
         }
 
-        if (h < -0.1f)
+        if (movX < -0.1f)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
             facingRight = false;
@@ -172,6 +168,14 @@ public class player_controller : MonoBehaviour
         transform.position = new Vector3(-4, -1, 0);
     }
 
+    public void ActivateMovement()
+    {
+        movement = true;
+    }
+    public void DeactivateMovement()
+    {
+        movement = false;
+    }
 
     void EnemyKnockBack(float enemyPosX)
     {
@@ -219,9 +223,4 @@ public class player_controller : MonoBehaviour
             wall_jump = false;
         }
     }
-
-
-    
-
-    
 }

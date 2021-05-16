@@ -200,8 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   distance: 0.1
-  amount: 20
-  had: {fileID: 0}
+  amount: 15
   groundDetector: {fileID: 1302656104}
 --- !u!58 &1571403090
 CircleCollider2D:

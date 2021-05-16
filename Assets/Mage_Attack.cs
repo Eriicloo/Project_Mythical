@@ -26,14 +26,14 @@ public class Mage_Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_player(amount);
             Destroy(gameObject);
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }
 
-        if (collision.tag == "Wall")
+        if (collision.CompareTag ("Wall"))
             Destroy(gameObject);
 
 

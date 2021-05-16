@@ -170,8 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c701c52eb99c77c49a1a8e4ef81d9e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  damage: 20
+  damage: 25
   stageTwo: 0
   circle: {fileID: 6932120581427278988}
   healthBar: {fileID: 0}

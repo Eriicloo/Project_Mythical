@@ -41,7 +41,7 @@ public class Player_Attack : MonoBehaviour
         if (collision.tag == "Boss") 
         {
             Destroy(gameObject);
-            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_boss(damage);
         }
     }
 }

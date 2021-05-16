@@ -50,7 +50,7 @@ public class Patrol_Hound : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.GetComponent<Health_and_Damage>().Subtract_life(amount);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_player(amount);
 
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }

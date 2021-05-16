@@ -61,10 +61,6 @@ public class Patrol : MonoBehaviour
 
 
         }
-        if (Vector2.Distance(transform.position, player.position) < stopDistance && Vector2.Distance(transform.position, player.position) > retreatDistance) {
-            transform.position = this.transform.position;
-            
-        }
         if (Vector2.Distance(transform.position, player.position) < retreatDistance) {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
 

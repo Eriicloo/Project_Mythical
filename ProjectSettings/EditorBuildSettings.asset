@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelBoss.unity
     guid: 0ffe1854c77449b4baa60bc8adfb9a41
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 8164a0b50ae19a04b8fdc09e926e0754
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: d38f3f5952fc5f045ad5f40893c775f1
   - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: 08fafef5498ad0943bdb31debaf22c20

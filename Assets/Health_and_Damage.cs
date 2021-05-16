@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health_and_Damage : MonoBehaviour
 {
@@ -10,9 +11,23 @@ public class Health_and_Damage : MonoBehaviour
     public float invencible_time = 0.5f;
     public float braking_time = 0.1f;
 
+
+
     Patrol patrol;
 
     public void Subtract_life(float amount)
+    {
+        if (!invencible && life > 0)
+        {
+            life -= amount;
+        }
+        if (life <= 1)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    public void Subtract_life_player(float amount)
     {
         if (!invencible && life > 0)
         {
@@ -21,6 +36,20 @@ public class Health_and_Damage : MonoBehaviour
         }
         if (life <= 1)
         {
+            SceneManager.LoadScene("GameOver");
+            Destroy(gameObject);
+        }
+
+    }
+    public void Subtract_life_boss(float amount)
+    {
+        if (!invencible && life > 0)
+        {
+            life -= amount;
+        }
+        if (life <= 1)
+        {
+            SceneManager.LoadScene("Win");
             Destroy(gameObject);
         }
 

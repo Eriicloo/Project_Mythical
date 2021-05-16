@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public float health = 100f;
     public float damage = 20f;
     public bool stageTwo = false;
 
@@ -23,19 +22,22 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 50 && stageTwo == false)
-        {
-            anim.SetTrigger("stageTwo");
-            stageTwo = true;
-        }
-        healthBar.value = health;
+
+
+
+        //if (health <= 50 && stageTwo == false)
+        //{
+        //    anim.SetTrigger("stageTwo");
+        //    stageTwo = true;
+        //}
+        //healthBar.value = health;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag ("Player"))
         {
-            collision.GetComponent<Health_and_Damage>().Subtract_life(damage);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_player(damage);
 
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }

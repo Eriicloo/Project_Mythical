@@ -10,13 +10,11 @@ public class cameraFollow : MonoBehaviour
 
     public int musicPlaying;
     private bool musicStart;
-    AudioManager audio;
 
     private Vector2 velocity;
 
     void Start()
     {
-        audio = FindObjectOfType<AudioManager>();
     }
 
     //Utilitzem el fixed update perque les fisiques es puguin fer cada segon en comptes de cada frame. Aixi no donarà problemes
