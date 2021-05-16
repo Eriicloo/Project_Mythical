@@ -10,7 +10,7 @@ public class MusicFinder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject bgm = GameObject.Find("Background Audio");
+        GameObject bgm = GameObject.Find("TitleSong");
         if (bgm) 
         {
             musicplayer = bgm.GetComponent<MusicPlayer>();

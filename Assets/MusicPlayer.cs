@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour
 {
     public AudioSource audioSource;
+
 
     private float musicvolume = 1f;
 
@@ -38,5 +40,4 @@ public class MusicPlayer : MonoBehaviour
     {
         musicvolume = volume;
     }
-
 }

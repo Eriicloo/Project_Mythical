@@ -8,11 +8,15 @@ public class cameraFollow : MonoBehaviour
     public Vector2 minCamPos, maxCamPos;
     public float smoothTime;
 
+    public int musicPlaying;
+    private bool musicStart;
+    AudioManager audio;
+
     private Vector2 velocity;
 
     void Start()
     {
-        
+        audio = FindObjectOfType<AudioManager>();
     }
 
     //Utilitzem el fixed update perque les fisiques es puguin fer cada segon en comptes de cada frame. Aixi no donarà problemes
@@ -28,5 +32,12 @@ public class cameraFollow : MonoBehaviour
         Mathf.Clamp(posX, minCamPos.x, maxCamPos.x), 
         Mathf.Clamp(posY, minCamPos.y, maxCamPos.y), 
         transform.position.z);
+
+        if (!musicStart) 
+        {
+            musicStart = true;
+            AudioManager.instance.PlayBgm(musicPlaying);
+        }
+
     }
 }
