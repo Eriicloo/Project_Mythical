@@ -14,7 +14,12 @@ public class Health_and_Damage : MonoBehaviour
 
 
     Patrol patrol;
+    private SpriteRenderer spr;
 
+    private void Start()
+    {
+        spr = GetComponent<SpriteRenderer>();
+    }
     public void Subtract_life(float amount)
     {
         if (!invencible && life > 0)
@@ -25,6 +30,9 @@ public class Health_and_Damage : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Invoke("ChangeColor", 0.7f);
+
+        spr.color = Color.red;
 
     }
     public void Subtract_life_player(float amount)
@@ -52,7 +60,14 @@ public class Health_and_Damage : MonoBehaviour
             SceneManager.LoadScene("Win");
             Destroy(gameObject);
         }
+        Invoke("ChangeColor", 0.7f);
 
+        spr.color = Color.red;
+    }
+
+    void ChangeColor()
+    {
+        spr.color = Color.white;
     }
 
     IEnumerator invulnerability()

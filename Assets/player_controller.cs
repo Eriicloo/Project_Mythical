@@ -184,14 +184,12 @@ public class player_controller : MonoBehaviour
         float side = Mathf.Sign(enemyPosX - transform.position.x);
         rb2d.AddForce(Vector2.right * side, ForceMode2D.Impulse);
 
-        movement = false;
         Invoke("EnableMovement", 0.7f);
 
         spr.color = Color.red;
     }
 
     void EnableMovement() {
-        movement = true;
         spr.color = Color.white;
     }
 
