@@ -11,6 +11,7 @@ public class player_controller : MonoBehaviour
     public float jumpPower = 7f;
     public int counterWallJump = 0;
     public float cd = 1f;
+    public float spikeDamage = 25f;
     private float nextDashTime = 0f;
     bool facingRight = true;
 
@@ -219,6 +220,15 @@ public class player_controller : MonoBehaviour
         if (collision.gameObject.tag == "Wall_Jumping")
         {
             wall_jump = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Spikes")
+        {
+            transform.position = new Vector3(0,0,0);
+            //collision.GetComponent<Health_and_Damage>().Subtract_life_player(spikeDamage);
         }
     }
 }

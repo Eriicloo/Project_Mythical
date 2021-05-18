@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 926b0c2c7c2198f468910477f8e94c5e
+  - enabled: 1
+    path: Assets/Scenes/Secret_lvl_1.unity
+    guid: 63e66a98fd8eee7419e953caa2c4aa99
   - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: 08fafef5498ad0943bdb31debaf22c20
