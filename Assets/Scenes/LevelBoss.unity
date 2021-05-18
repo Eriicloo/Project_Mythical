@@ -4120,71 +4120,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 709616949, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 709616949, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.13974857
-      objectReference: {fileID: 0}
-    - target: {fileID: 709616949, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
-      propertyPath: m_Radius
-      value: 0.08419609
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632123461, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668047759077, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.15843302
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668047759077, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.35329473
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668209069411, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: cd
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668209069411, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668209069416, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.010788232
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510091668209069416, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.3548755
-      objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069418, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 2510091668209069418, guid: e23527f1807e4234eabac5f7f5d516f1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.42
+      value: 32.48
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: -1.71
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
@@ -4231,9 +4180,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 709616949, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
-    - {fileID: 1632123461, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e23527f1807e4234eabac5f7f5d516f1, type: 3}
 --- !u!1 &709616947 stripped
 GameObject:
@@ -4265,22 +4212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3853fc0751fd80b4b84e4e4bc5286618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &709616950
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709616947}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0038414001, y: 0.01885748}
-  m_Size: {x: 0.2276802, y: 0.358315}
-  m_Direction: 0
 --- !u!1 &731431618
 GameObject:
   m_ObjectHideFlags: 0
@@ -10150,17 +10081,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1475385485}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 580264523}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

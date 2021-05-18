@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32987678, y: 0.16613263}
-  m_Size: {x: 0.25994945, y: 0.36869395}
+  m_Offset: {x: -0.32987678, y: 0.15843302}
+  m_Size: {x: 0.25994945, y: 0.35329473}
   m_Direction: 0
 --- !u!114 &2510091668047759076
 MonoBehaviour:
@@ -75,8 +75,7 @@ GameObject:
   - component: {fileID: 2510091668209069411}
   - component: {fileID: 2510091668209069416}
   - component: {fileID: 1632123460}
-  - component: {fileID: 709616949}
-  - component: {fileID: 1632123461}
+  - component: {fileID: 709616950}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -208,9 +207,9 @@ MonoBehaviour:
   wall_jump: 0
   jumpPower: 6
   counterWallJump: 0
-  cd: 2
+  cd: 1
   action: 0
-  dashForce: 500
+  dashForce: 300
   startDashTime: 0.2
   AttackLeft: {fileID: 6578042576924922338, guid: f7a165c239610aa499eb3f426f650317,
     type: 3}
@@ -231,8 +230,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0034098625, y: 0.019421145}
-  m_Size: {x: 0.27859497, y: 0.37214133}
+  m_Offset: {x: -0.0034098625, y: 0.010788232}
+  m_Size: {x: 0.27859497, y: 0.3548755}
   m_Direction: 0
 --- !u!114 &1632123460
 MonoBehaviour:
@@ -251,8 +250,8 @@ MonoBehaviour:
   invencible: 0
   invencible_time: 0.5
   braking_time: 0.2
---- !u!58 &709616949
-CircleCollider2D:
+--- !u!70 &709616950
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -264,22 +263,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.18359065}
-  serializedVersion: 2
-  m_Radius: 0.040354013
---- !u!58 &1632123461
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2510091668209069418}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.003627658, y: 0.18755102}
-  serializedVersion: 2
-  m_Radius: 0.034271
+  m_Offset: {x: -0.0038414001, y: 0.01885748}
+  m_Size: {x: 0.2276802, y: 0.358315}
+  m_Direction: 0

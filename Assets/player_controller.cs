@@ -89,7 +89,7 @@ public class player_controller : MonoBehaviour
             Attack();
         }
 
-        if (Input.GetKey(KeyCode.LeftAlt) || Input.GetButton("Glide"))
+        if (Input.GetKey(KeyCode.Q) || Input.GetButton("Glide"))
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, -1f);
         }
@@ -165,7 +165,7 @@ public class player_controller : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        transform.position = new Vector3(-4, -1, 0);
+        transform.position = new Vector3(0, 0, 0);
     }
 
     public void ActivateMovement()
@@ -184,7 +184,7 @@ public class player_controller : MonoBehaviour
         float side = Mathf.Sign(enemyPosX - transform.position.x);
         rb2d.AddForce(Vector2.right * side, ForceMode2D.Impulse);
 
-        Invoke("EnableMovement", 0.7f);
+        Invoke("EnableMovement", 0.3f);
 
         spr.color = Color.red;
     }

@@ -30,7 +30,7 @@ public class Health_and_Damage : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Invoke("ChangeColor", 0.7f);
+        Invoke("ChangeColor", 0.3f);
 
         spr.color = Color.red;
 
@@ -60,7 +60,7 @@ public class Health_and_Damage : MonoBehaviour
             SceneManager.LoadScene("Win");
             Destroy(gameObject);
         }
-        Invoke("ChangeColor", 0.7f);
+        Invoke("ChangeColor", 0.3f);
 
         spr.color = Color.red;
     }
