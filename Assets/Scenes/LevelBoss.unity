@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17397268}
   - component: {fileID: 17397269}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: "Coras\xF3n_de_mel\xEDon"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4058,12 +4058,12 @@ PrefabInstance:
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.48
+      value: 32.45
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.71
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
@@ -5986,7 +5986,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1815
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

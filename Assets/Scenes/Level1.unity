@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4456,18 +4456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796408fd02573aa40b597dbb0e9768b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1632123455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632123453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc95ea45fc6ccb4daa6936169836197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1648172602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,7 +5712,6 @@ GameObject:
   - component: {fileID: 2020667522}
   - component: {fileID: 2020667521}
   - component: {fileID: 2020667525}
-  - component: {fileID: 2020667526}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -5828,18 +5815,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1342948389}
---- !u!114 &2020667526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020667520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e07e93eb467474d9d8ad88ba85ab4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2049891184
 PrefabInstance:
   m_ObjectHideFlags: 0

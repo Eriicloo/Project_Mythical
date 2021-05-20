@@ -44,4 +44,13 @@ public class Player_Attack : MonoBehaviour
             collision.GetComponent<Health_and_Damage>().Subtract_life_boss(damage);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Boss")
+        {
+            Destroy(gameObject);
+            collision.gameObject.GetComponent<Health_and_Damage>().Subtract_life(damage);
+        }
+    }
 }
