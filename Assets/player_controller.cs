@@ -119,9 +119,7 @@ public class player_controller : MonoBehaviour
             rb2d.velocity = fixedVelocity;
         }
 
- 
-
-        if (!movement) 
+        if (!movement)
             movX = 0;
 
         rb2d.AddForce(Vector2.right * speed * movX);
@@ -160,8 +158,6 @@ public class player_controller : MonoBehaviour
                 isDashing = false;
             }
         }
-
-
     }
 
     void OnBecameInvisible()

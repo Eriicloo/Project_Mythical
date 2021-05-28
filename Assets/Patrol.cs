@@ -16,7 +16,7 @@ public class Patrol : MonoBehaviour
     float nextAttack = 0.0f;
 
     private bool rightMove = true;
-    public float agroDistance;
+    public bool activePatrol = true;
 
     public Transform groundDetector;
     private Transform player;
@@ -25,7 +25,7 @@ public class Patrol : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Physics2D.queriesStartInColliders = false;
 
@@ -34,7 +34,9 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+        //Patroling:
+       if(activePatrol) transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, distance);
 
@@ -54,22 +56,26 @@ public class Patrol : MonoBehaviour
             }
         }
 
-
-        if (Vector2.Distance(transform.position, player.position) > stopDistance) {
-        
+        // when the player is nearby:
+        if (Vector2.Distance(transform.position, player.position) > stopDistance)
+        {
+            activePatrol = false;
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-
-
         }
-        if (Vector2.Distance(transform.position, player.position) < retreatDistance) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
 
-            if(Time.time > nextAttack)
+        if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+        {
+            activePatrol = false;
+            transform.position = new Vector2(Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime).x, transform.position.y);
+
+            if (Time.time > nextAttack)
             {
                 nextAttack = Time.time + fireRate;
                 Attack();
             }
-        }   
+        }
+       
+
     }
 
     void Attack()
