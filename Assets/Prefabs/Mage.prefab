@@ -208,8 +208,8 @@ MonoBehaviour:
     type: 3}
   AttackRight: {fileID: 1597549779950568549, guid: 70f57823edb20da498331b5ba740d8e3,
     type: 3}
-  fireRate: 1
-  agroDistance: 2
+  fireRate: 2
+  activePatrol: 1
   groundDetector: {fileID: 1668159429}
   shot: {fileID: 1597549779950568549, guid: 70f57823edb20da498331b5ba740d8e3, type: 3}
 --- !u!114 &5422447083623954341
