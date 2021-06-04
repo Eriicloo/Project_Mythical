@@ -72,8 +72,6 @@ public class Patrol : MonoBehaviour
                 Attack();
             }
         }
-       
-
     }
 
     void Attack()
