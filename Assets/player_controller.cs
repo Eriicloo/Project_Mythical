@@ -7,7 +7,6 @@ public class player_controller : MonoBehaviour
     public float maxSpeed = 5f;
     public float speed = 2f;
     public bool grounded;
-    public bool wall_jump;
     public float jumpPower = 7f;
     public float cd = 1f;
     public float spikeDamage = 25f;
@@ -15,6 +14,12 @@ public class player_controller : MonoBehaviour
     private float nextDashTime = 0f;
     bool facingRight = true;
 
+    public bool isTouching = false;
+    public bool wallJumpLeft;
+    public bool wallJumpRight;
+    public bool wallSliding;
+    public float wallSlidingSpeed = 0.75f;
+    public float wallJumpCD = 0.20f;
 
     public bool action;
 
@@ -25,8 +30,6 @@ public class player_controller : MonoBehaviour
     float currentDashTime;
     float dashDirection;
     bool isDashing;
-
-
 
     public GameObject AttackLeft, AttackRight;
     Vector2 AttackPos;
@@ -62,7 +65,11 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
-            if (wall_jump)
+            if (wallJumpLeft)
+            {
+                jump = true;
+            }
+            if (wallJumpRight)
             {
                 jump = true;
             }
@@ -103,6 +110,29 @@ public class player_controller : MonoBehaviour
             }
         }
 
+        if (isTouching && grounded == false)
+        {
+            wallSliding = true;
+        }
+        else
+        {
+            wallSliding = false;
+        }
+
+        if (wallSliding)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+
+        if (wallJumpRight && jump)
+        {
+            rb2d.velocity = new Vector2(-15, -30);
+        }
+
+        if (wallJumpLeft && jump)
+        {
+            rb2d.velocity = new Vector2(15, 30);
+        }
     }
 
     void FixedUpdate()
@@ -118,7 +148,10 @@ public class player_controller : MonoBehaviour
         if (!movement)
             movX = 0;
 
-        rb2d.AddForce(Vector2.right * speed * movX);
+        if (movement)
+        {
+            rb2d.AddForce(Vector2.right * speed * movX);
+        }
 
         float limitedSpeed = Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed);
         rb2d.velocity = new Vector2(limitedSpeed, rb2d.velocity.y);
@@ -177,12 +210,12 @@ public class player_controller : MonoBehaviour
         float side = Mathf.Sign(enemyPosX - transform.position.x);
         rb2d.AddForce(Vector2.right * side, ForceMode2D.Impulse);
 
-        Invoke("EnableMovement", 0.3f);
+        Invoke("ChangeColor", 0.3f);
 
         spr.color = Color.red;
     }
 
-    void EnableMovement() {
+    void ChangeColor() {
         spr.color = Color.white;
     }
 
@@ -203,11 +236,15 @@ public class player_controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "WallJumpingLeft")
         {
-            wall_jump = true;
+            movement = false;
+            isTouching = true;
+            wallJumpLeft = true;
         }
         if (collision.gameObject.tag == "WallJumpingRight")
         {
-            wall_jump = true;
+            movement = false;
+            isTouching = true;
+            wallJumpRight = true;
         }
     }
 
@@ -215,13 +252,24 @@ public class player_controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "WallJumpingLeft")
         {
-            wall_jump = false;
+            isTouching = false;
+            wallJumpLeft = false;
+            StartCoroutine(EnableMovement());
         }
         if (collision.gameObject.tag == "WallJumpingRight")
         {
-            wall_jump = false;
+            isTouching = false;
+            wallJumpRight = false;
+            StartCoroutine(EnableMovement());  
         }
     }
+
+    IEnumerator EnableMovement()
+    {
+        yield return new WaitForSeconds(wallJumpCD);
+        movement = true;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
