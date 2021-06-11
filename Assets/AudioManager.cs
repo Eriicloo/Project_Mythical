@@ -13,8 +13,12 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
+        if (instance == null) 
+        { 
             instance = this;
+            DontDestroyOnLoad(instance);
+        }
+
         else
         {
             Destroy(gameObject);
@@ -46,5 +50,4 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < bgm.Length; i++)
             bgm[i].Stop();
     }
-
 }

@@ -14,8 +14,11 @@ public class MusicPlayer : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (instance == null) 
+        { 
             instance = this;
+            DontDestroyOnLoad(instance);
+        }
         else
         {
             Destroy(gameObject);

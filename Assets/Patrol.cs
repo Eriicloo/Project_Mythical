@@ -34,9 +34,27 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.position.y > transform.position.y - 0.5f && player.position.y < transform.position.y + 0.5f)
+        {
+            if (Vector2.Distance(transform.position, player.position) > stopDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            }
 
-        //Patroling:
-       transform.Translate(Vector2.right * speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+            {
+                transform.position = new Vector2(Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime).x, transform.position.y);
+
+                if (Time.time > nextAttack)
+                {
+                    nextAttack = Time.time + fireRate;
+                    Attack();
+                }
+                return;
+            }
+        }
+
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, distance);
 
@@ -53,23 +71,6 @@ public class Patrol : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 rightMove = true;
                 facingRight = true;
-            }
-        }
-
-        // when the player is nearby:
-        if (Vector2.Distance(transform.position, player.position) > stopDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-
-        if (Vector2.Distance(transform.position, player.position) < retreatDistance)
-        {
-            transform.position = new Vector2(Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime).x, transform.position.y);
-
-            if (Time.time > nextAttack)
-            {
-                nextAttack = Time.time + fireRate;
-                Attack();
             }
         }
     }
