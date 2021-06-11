@@ -6784,8 +6784,30 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.15574265
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8850399545690710011, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
+--- !u!1 &1282942915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8850399545690710014, guid: 8928fc4b18e67c644befa64f3370b727,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282942914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282942916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282942915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d628ef2cc0fb8b408e54aa8c3eaef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 5
+  boss: {fileID: 0}
+  key: Game_Over
 --- !u!4 &1287642562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596864714215661606, guid: 549cf2bcd71657c4e9e084866839f091,

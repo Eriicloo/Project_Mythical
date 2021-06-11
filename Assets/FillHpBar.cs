@@ -14,8 +14,6 @@ public class FillHpBar : MonoBehaviour
         slider = GetComponent<Slider>();
     }
 
-   
-
     // Update is called once per frame
     void Update()
     {

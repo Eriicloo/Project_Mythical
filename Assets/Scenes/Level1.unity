@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2347,6 +2347,27 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.7750249, y: 0.08403516}
   - {x: 0.7612735, y: 0.08250737}
+--- !u!1 &891465612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8850399545690710014, guid: 8928fc4b18e67c644befa64f3370b727,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586732123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &891465613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891465612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d628ef2cc0fb8b408e54aa8c3eaef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 9
+  boss: {fileID: 1774678232}
+  key: Level4
 --- !u!1001 &891542071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2594,7 +2615,7 @@ PrefabInstance:
     - target: {fileID: 8125816915183612925, guid: e68fa17a6df0bb649ad15b6b625e5fa6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8125816915183612925, guid: e68fa17a6df0bb649ad15b6b625e5fa6,
         type: 3}
@@ -3169,7 +3190,7 @@ PrefabInstance:
     - target: {fileID: 3872722644044908690, guid: c1ca5da8e0d2de44ca0fe06b0be1f9c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3872722644044908690, guid: c1ca5da8e0d2de44ca0fe06b0be1f9c4,
         type: 3}
@@ -4784,7 +4805,7 @@ PrefabInstance:
     - target: {fileID: 8850399545690710014, guid: 8928fc4b18e67c644befa64f3370b727,
         type: 3}
       propertyPath: m_Name
-      value: Portal (1)
+      value: PortalBoss
       objectReference: {fileID: 0}
     - target: {fileID: 8850399545690710015, guid: 8928fc4b18e67c644befa64f3370b727,
         type: 3}
@@ -4812,6 +4833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66365ab0e7125d7418b35836015ec8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearedLevels: 0
+  barra: {fileID: 2122223742}
 --- !u!1001 &1776786364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4907,6 +4930,27 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8850399545690710011, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
+--- !u!1 &1776786365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8850399545690710014, guid: 8928fc4b18e67c644befa64f3370b727,
+    type: 3}
+  m_PrefabInstance: {fileID: 1776786364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1776786366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776786365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d628ef2cc0fb8b408e54aa8c3eaef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 6
+  boss: {fileID: 1774678232}
+  key: Level2
 --- !u!1001 &1786498339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5361,12 +5405,12 @@ PrefabInstance:
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.809
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.284
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2510091668209069422, guid: e23527f1807e4234eabac5f7f5d516f1,
         type: 3}
@@ -5716,6 +5760,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5257954497782925379, guid: 124a9ddaacb9190498edae3c13d03448,
     type: 3}
   m_PrefabInstance: {fileID: 5257954499810707014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2122223742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8125816915382046782, guid: e68fa17a6df0bb649ad15b6b625e5fa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 931185528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2141989548
 GameObject:
@@ -6101,5 +6151,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8850399545690710011, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
+--- !u!1 &8850399546389070039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8850399545690710014, guid: 8928fc4b18e67c644befa64f3370b727,
+    type: 3}
+  m_PrefabInstance: {fileID: 8850399546389070038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8850399546389070040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850399546389070039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d628ef2cc0fb8b408e54aa8c3eaef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 8
+  boss: {fileID: 1774678232}
+  key: Level3

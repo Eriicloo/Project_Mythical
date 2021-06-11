@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour
 {
@@ -284,5 +285,12 @@ public class player_controller : MonoBehaviour
             transform.position = new Vector3(0, 0, 0);
             collision.GetComponent<Health_and_Damage>().Subtract_life_player(sawDamage);
         }
+
+        if (collision.gameObject.tag == "Water")
+        {
+            SceneManager.LoadScene("GameOver");
+            Destroy(gameObject);
+        }
+
     }
 }
