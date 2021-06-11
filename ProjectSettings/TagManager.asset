@@ -8,10 +8,12 @@ TagManager:
   - Platform
   - Wall
   - Enemy
-  - Wall_Jumping
   - Boss
   - Hounds
   - Spikes
+  - Saw
+  - WallJumpingRight
+  - WallJumpingLeft
   layers:
   - Default
   - TransparentFX

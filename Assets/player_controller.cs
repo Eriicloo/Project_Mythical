@@ -9,9 +9,9 @@ public class player_controller : MonoBehaviour
     public bool grounded;
     public bool wall_jump;
     public float jumpPower = 7f;
-    public int counterWallJump = 0;
     public float cd = 1f;
     public float spikeDamage = 25f;
+    public float sawDamage = 20f;
     private float nextDashTime = 0f;
     bool facingRight = true;
 
@@ -62,19 +62,15 @@ public class player_controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButtonDown("Jump"))
         {
-            if (wall_jump && counterWallJump < 4)
+            if (wall_jump)
             {
                 jump = true;
-
-                if(jump)
-                    counterWallJump++;
             }
 
             if (grounded)
             {
                 jump = true;
                 doubleJump = true;
-                counterWallJump = 0;
             }
             else if (doubleJump)
             {
@@ -205,7 +201,11 @@ public class player_controller : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall_Jumping")
+        if (collision.gameObject.tag == "WallJumpingLeft")
+        {
+            wall_jump = true;
+        }
+        if (collision.gameObject.tag == "WallJumpingRight")
         {
             wall_jump = true;
         }
@@ -213,7 +213,11 @@ public class player_controller : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall_Jumping")
+        if (collision.gameObject.tag == "WallJumpingLeft")
+        {
+            wall_jump = false;
+        }
+        if (collision.gameObject.tag == "WallJumpingRight")
         {
             wall_jump = false;
         }
@@ -224,7 +228,13 @@ public class player_controller : MonoBehaviour
         if (collision.gameObject.tag == "Spikes")
         {
             transform.position = new Vector3(0,0,0);
-            //collision.GetComponent<Health_and_Damage>().Subtract_life_player(spikeDamage);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_player(spikeDamage);
+        }
+
+        if (collision.gameObject.tag == "Saw")
+        {
+            transform.position = new Vector3(0, 0, 0);
+            collision.GetComponent<Health_and_Damage>().Subtract_life_player(sawDamage);
         }
     }
 }

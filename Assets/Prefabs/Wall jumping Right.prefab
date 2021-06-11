@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 1596864714215661604, guid: 549cf2bcd71657c4e9e084866839f091,
         type: 3}
       propertyPath: m_Name
-      value: Wall jumping
+      value: Wall jumping Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1596864714215661604, guid: 549cf2bcd71657c4e9e084866839f091,
         type: 3}
       propertyPath: m_TagString
-      value: Wall_Jumping
+      value: WallJumpingRight
       objectReference: {fileID: 0}
     - target: {fileID: 1596864714215661606, guid: 549cf2bcd71657c4e9e084866839f091,
         type: 3}
