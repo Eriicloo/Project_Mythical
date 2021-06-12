@@ -75,11 +75,14 @@ public class player_controller : MonoBehaviour
                 jump = true;
             }
 
+            
+
             if (grounded)
             {
                 jump = true;
                 doubleJump = true;
             }
+
             else if (doubleJump)
             {
                 jump = true;
