@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -19285,7 +19285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   follow: {fileID: 464516821}
   minCamPos: {x: -17.63, y: -3.25}
-  maxCamPos: {x: 10.25, y: 18.9}
+  maxCamPos: {x: 10.25, y: 23.4}
   smoothTime: 0.15
   musicPlaying: 1
 --- !u!114 &1287875962
@@ -21215,6 +21215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850399545690710015, guid: 8928fc4b18e67c644befa64f3370b727,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8850399545690710011, guid: 8928fc4b18e67c644befa64f3370b727, type: 3}
