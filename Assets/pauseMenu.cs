@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class pauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public string key1 = "Level4";
+    public string key2 = "Level2";
+    public string key3 = "Level3";
 
     public GameObject pauseMenuUI;
 
@@ -48,6 +51,9 @@ public class pauseMenu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
+        PlayerPrefs.SetInt(key1, 0);
+        PlayerPrefs.SetInt(key2, 0);
+        PlayerPrefs.SetInt(key3, 0);
         SceneManager.LoadScene("Level1");
         GameIsPaused = false;
     }

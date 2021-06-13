@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7123,7 +7123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 5
-  boss: {fileID: 0}
   key: Game_Over
 --- !u!4 &1287642562 stripped
 Transform:
@@ -9067,6 +9066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc7cc43f956d0745ba0096716471f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key1: Level4
+  key2: Level2
+  key3: Level3
   pauseMenuUI: {fileID: 110472671}
 --- !u!114 &1726154973
 MonoBehaviour:
@@ -9965,7 +9967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910335408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 29.91, y: -0.82, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1277936738}
