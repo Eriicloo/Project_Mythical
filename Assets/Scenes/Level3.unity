@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6311,6 +6311,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2138527563}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &464516823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1632123460, guid: e23527f1807e4234eabac5f7f5d516f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2138527563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464516821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796408fd02573aa40b597dbb0e9768b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &465835900
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,6 +7126,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 929912826}
     m_Modifications:
+    - target: {fileID: 1302656104, guid: 124a9ddaacb9190498edae3c13d03448, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.798
+      objectReference: {fileID: 0}
     - target: {fileID: 5257954497782925379, guid: 124a9ddaacb9190498edae3c13d03448,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12140,7 +12156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 778.8, y: -360.2}
+  m_AnchoredPosition: {x: 778.8, y: 362}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856053904
@@ -18636,8 +18652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 464516821}
-  minCamPos: {x: -100, y: -100}
-  maxCamPos: {x: 1000, y: 1000}
+  minCamPos: {x: -17.63, y: -3.25}
+  maxCamPos: {x: 10.25, y: 18.9}
   smoothTime: 0.15
   musicPlaying: 1
 --- !u!114 &1287875962
@@ -18687,7 +18703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287875959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.2, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465835901}
@@ -26251,7 +26267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b502a87cde0249428d9eb67759910a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
+  health: {fileID: 464516823}
   fillImage: {fileID: 1782894793}
 --- !u!114 &1904164564
 MonoBehaviour:

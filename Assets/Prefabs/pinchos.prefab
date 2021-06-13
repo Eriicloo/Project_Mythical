@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9086680514011305046}
   - component: {fileID: 9086680514011305044}
   - component: {fileID: 8058786199851577455}
+  - component: {fileID: 3013453091254049152}
   m_Layer: 0
   m_Name: pinchos
   m_TagString: Spikes
@@ -136,3 +137,16 @@ EdgeCollider2D:
   - {x: 6.156807, y: -1.5520144}
   - {x: 6.415863, y: -1.5513277}
   - {x: 6.45, y: -2.3052359}
+--- !u!114 &3013453091254049152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086680514011305047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0c05858e465f7429502cb6193b7990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeDamage: 15

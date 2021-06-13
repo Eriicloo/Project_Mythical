@@ -10,8 +10,7 @@ public class player_controller : MonoBehaviour
     public bool grounded;
     public float jumpPower = 7f;
     public float cd = 1f;
-    public float spikeDamage = 25f;
-    public float sawDamage = 20f;
+
     private float nextDashTime = 0f;
     bool facingRight = true;
 
@@ -128,14 +127,16 @@ public class player_controller : MonoBehaviour
             rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if (wallJumpRight && jump)
-        {
-            rb2d.velocity = new Vector2(-15, -30);
-        }
-
         if (wallJumpLeft && jump)
         {
-            rb2d.velocity = new Vector2(15, 30);
+            rb2d.velocity = new Vector2(15, 20);
+            doubleJump = true;
+        }
+
+        if (wallJumpRight && jump)
+        {
+            rb2d.velocity = new Vector2(-15, 20);
+            doubleJump = true;
         }
     }
 
@@ -277,23 +278,20 @@ public class player_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Spikes")
-        {
-            transform.position = new Vector3(0,0,0);
-            collision.GetComponent<Health_and_Damage>().Subtract_life_player(spikeDamage);
-        }
-
-        if (collision.gameObject.tag == "Saw")
+        if (collision.CompareTag("Spikes"))
         {
             transform.position = new Vector3(0, 0, 0);
-            collision.GetComponent<Health_and_Damage>().Subtract_life_player(sawDamage);
         }
 
-        if (collision.gameObject.tag == "Water")
+        if (collision.CompareTag("Saw"))
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
+
+        if (collision.CompareTag("Water"))
         {
             SceneManager.LoadScene("GameOver");
             Destroy(gameObject);
         }
-
     }
 }
