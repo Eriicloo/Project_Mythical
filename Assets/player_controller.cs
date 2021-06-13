@@ -290,8 +290,7 @@ public class player_controller : MonoBehaviour
 
         if (collision.CompareTag("Water"))
         {
-            SceneManager.LoadScene("GameOver");
-            Destroy(gameObject);
+            transform.position = new Vector3(0, 0, 0);
         }
     }
 }

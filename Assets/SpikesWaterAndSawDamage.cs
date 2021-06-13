@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikesAndSawDamage : MonoBehaviour
+public class SpikesWaterAndSawDamage : MonoBehaviour
 {
 
     public float spikeDamage = 15.0f;
