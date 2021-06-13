@@ -25078,6 +25078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc7cc43f956d0745ba0096716471f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key1: Level4
+  key2: Level2
+  key3: Level3
   pauseMenuUI: {fileID: 1190446749}
 --- !u!114 &891225393
 MonoBehaviour:
@@ -25137,7 +25140,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &891225396
 RectTransform:
