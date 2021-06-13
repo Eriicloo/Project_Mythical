@@ -2797,8 +2797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 2
-  boss: {fileID: 0}
-  key: Level1
+  key: Level2
 --- !u!1 &985870108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,7 +2917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 7
-  boss: {fileID: 0}
   key: Secret_Level
 --- !u!4 &1009051632 stripped
 Transform:
