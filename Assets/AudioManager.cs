@@ -28,12 +28,6 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlayBgm(int musicPlaying) 
     {
         if (!bgm[musicPlaying].isPlaying) 

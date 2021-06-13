@@ -39,5 +39,14 @@ public class MusicFinder : MonoBehaviour
                 GetComponent<Slider>().onValueChanged.AddListener(musicplayer.updateVolume);
             }
         }
+        GameObject bgm4 = GameObject.Find("Entropia");
+        if (bgm4)
+        {
+            musicplayer = bgm4.GetComponent<MusicPlayer>();
+            if (musicplayer)
+            {
+                GetComponent<Slider>().onValueChanged.AddListener(musicplayer.updateVolume);
+            }
+        }
     }
 }

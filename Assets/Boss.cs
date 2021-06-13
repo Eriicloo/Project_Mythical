@@ -22,9 +22,6 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
         //if (health <= 50 && stageTwo == false)
         //{
         //    anim.SetTrigger("stageTwo");
@@ -42,8 +39,6 @@ public class Boss : MonoBehaviour
             collision.SendMessage("EnemyKnockBack", transform.position.x);
         }
     }
-
-
     public void ActivateCollider() 
     {
         circle.enabled = true;
